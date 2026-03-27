@@ -145,8 +145,6 @@
       letter-spacing: -0.03em;
       color: #fff;
       margin-bottom: 0.4rem;
-      opacity: 0;
-      animation: fadeUp 0.55s 0.2s ease forwards;
     }
 
     .hero-role {
@@ -197,6 +195,32 @@
       margin-left: 5rem;
       opacity: 0;
       animation: fadeIn 0.8s 0.6s ease forwards;
+    }
+
+    .hero-name-row {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      opacity: 0;
+      animation: fadeUp 0.55s 0.2s ease forwards;
+    }
+
+    .hero-avatar {
+      flex-shrink: 0;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 1px solid var(--border2);
+      box-shadow: 0 0 0 1px var(--accent-d), 0 4px 20px rgba(0,0,0,0.5);
+      overflow: hidden;
+    }
+
+    .hero-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 15%;
+      display: block;
     }
 
     /* Terminal */
@@ -424,7 +448,12 @@
 <section id="hero">
   <div class="hero-left">
     <div class="hero-eyebrow">Full Stack Developer</div>
-    <h1>Khalid<br>Farah</h1>
+    <div class="hero-name-row">
+      <div class="hero-avatar">
+        <img src="IMG_3210.jpg" alt="Khalid Farah" />
+      </div>
+      <h1>Khalid<br>Farah</h1>
+    </div>
     <p class="hero-role">Building for the <em>web</em>, front to back.</p>
     <p class="hero-bio">
       I design and develop high-quality web applications — from polished, accessible interfaces to scalable server-side systems. Based in the UK and open to freelance and full-time opportunities.
