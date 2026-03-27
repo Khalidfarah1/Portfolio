@@ -16,6 +16,9 @@
       --accent:   #4fc3f7;
       --accent-d: #0288d1;
       --green:    #43d9ad;
+      --purple:   #bd93f9;
+      --orange:   #ffb86c;
+      --pink:     #ff79c6;
       --text:     #cdd9e5;
       --text-dim: #768390;
       --text-faint: #3d4b5c;
@@ -414,6 +417,43 @@
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 99px; }
 
+    /* Section number accent colors */
+    #about .section-num    { color: var(--green); }
+    #skills .section-num   { color: var(--purple); }
+    #projects .section-num { color: var(--orange); }
+
+    /* Skill block title colors */
+    .skills-cols .skill-block:nth-child(1) .skill-block-title { color: var(--accent); }
+    .skills-cols .skill-block:nth-child(2) .skill-block-title { color: var(--green); }
+    .skills-cols .skill-block:nth-child(3) .skill-block-title { color: var(--purple); }
+    .skills-cols .skill-block:nth-child(4) .skill-block-title { color: var(--orange); }
+
+    /* Stat number colors */
+    .stat-item:nth-child(1) .stat-num { color: var(--accent); }
+    .stat-item:nth-child(2) .stat-num { color: var(--green); }
+    .stat-item:nth-child(3) .stat-num { color: var(--orange); }
+    .stat-item:nth-child(4) .stat-num { color: var(--purple); }
+
+    /* Language bar colors */
+    .lang-row:nth-child(1) .lang-bar-fill { background: linear-gradient(90deg, var(--accent-d), var(--accent)); }
+    .lang-row:nth-child(2) .lang-bar-fill { background: linear-gradient(90deg, #2a9d6b, var(--green)); }
+    .lang-row:nth-child(3) .lang-bar-fill { background: linear-gradient(90deg, #8c5fd6, var(--purple)); }
+    .lang-row:nth-child(4) .lang-bar-fill { background: linear-gradient(90deg, #c87a2e, var(--orange)); }
+    .lang-row:nth-child(5) .lang-bar-fill { background: linear-gradient(90deg, #c04f8e, var(--pink)); }
+
+    /* Project tag colors per row */
+    .project-row:nth-child(1) .project-row-tags .tag { color: var(--accent);  border-color: rgba(79,195,247,0.2);  background: rgba(79,195,247,0.05); }
+    .project-row:nth-child(2) .project-row-tags .tag { color: var(--green);   border-color: rgba(67,217,173,0.2);  background: rgba(67,217,173,0.05); }
+    .project-row:nth-child(3) .project-row-tags .tag { color: var(--purple);  border-color: rgba(189,147,249,0.2); background: rgba(189,147,249,0.05); }
+    .project-row:nth-child(4) .project-row-tags .tag { color: var(--orange);  border-color: rgba(255,184,108,0.2); background: rgba(255,184,108,0.05); }
+    .project-row:nth-child(5) .project-row-tags .tag { color: var(--pink);    border-color: rgba(255,121,198,0.2); background: rgba(255,121,198,0.05); }
+    .project-row:nth-child(6) .project-row-tags .tag { color: var(--accent);  border-color: rgba(79,195,247,0.2);  background: rgba(79,195,247,0.05); }
+
+    /* Contact card icon colors */
+    .contact-cards .contact-card:nth-child(1) .contact-card-icon svg { stroke: var(--accent); }
+    .contact-cards .contact-card:nth-child(2) .contact-card-icon svg { stroke: var(--green); }
+    .contact-cards .contact-card:nth-child(3) .contact-card-icon svg { stroke: var(--purple); }
+
     @media (max-width: 900px) {
       nav { padding: 0 1.5rem; }
       .nav-links { display: none; }
@@ -542,6 +582,7 @@
       <div class="skill-block-title">Backend</div>
       <div class="skill-tags">
         <span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">Python</span>
+        <span class="tag">Java</span><span class="tag">Object-Oriented Programming</span>
         <span class="tag">FastAPI</span><span class="tag">PHP</span><span class="tag">REST APIs</span>
         <span class="tag">GraphQL</span><span class="tag">JWT / Auth</span>
       </div>
