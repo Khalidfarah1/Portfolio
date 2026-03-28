@@ -879,7 +879,7 @@
 </div>
 
 <footer>
-  <div class="footer-left">&copy; 2026 <span>Khalid Farah</span> &mdash; Full Stack Developer</div>
+  <div class="footer-left">&copy; <span id="footer-year"></span> <span>Khalid Farah</span> &mdash; Full Stack Developer</div>
   <div class="footer-right">
     <a href="mailto:khalidfarah9@gmail.com">Email</a>
     <a href="https://github.com/khalidfarah1" target="_blank">GitHub</a>
@@ -913,6 +913,9 @@
       });
     }
   }, { threshold: 0.2 }).observe(langList);
+
+  // Dynamic footer year
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
 
   // Terminal typing animation
   const lines = [
