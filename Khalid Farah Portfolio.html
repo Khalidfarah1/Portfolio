@@ -125,12 +125,25 @@
       font-size: 0.78rem;
       padding: 0.4rem 1rem;
       border-radius: 5px;
-      border: 1px solid var(--border2);
-      color: var(--accent);
+      border: 1px solid rgba(67,217,173,0.3);
+      color: var(--green);
       text-decoration: none;
       transition: all 0.2s;
+      display: flex; align-items: center; gap: 0.5rem;
     }
-    .nav-cta:hover { background: rgba(79,195,247,0.07); border-color: var(--accent); }
+    .nav-cta:hover { background: rgba(67,217,173,0.07); border-color: var(--green); }
+    .status-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 0 0 rgba(67,217,173,0.6);
+      animation: pulse-dot 2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse-dot {
+      0%   { box-shadow: 0 0 0 0 rgba(67,217,173,0.6); }
+      70%  { box-shadow: 0 0 0 6px rgba(67,217,173,0); }
+      100% { box-shadow: 0 0 0 0 rgba(67,217,173,0); }
+    }
 
     /* HERO */
     #hero {
@@ -581,7 +594,7 @@
     <li><a href="#certs">Certificates</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="mailto:khalidfarah9@gmail.com" class="nav-cta">Available for work</a>
+  <a href="mailto:khalidfarah9@gmail.com" class="nav-cta"><span class="status-dot"></span>Available for work</a>
 </nav>
 
 <section id="hero">
