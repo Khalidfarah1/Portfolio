@@ -472,6 +472,80 @@
     .project-row:nth-child(6) .project-row-tags .tag { color: var(--accent);  border-color: rgba(79,195,247,0.2);  background: rgba(79,195,247,0.05); }
     .project-row:nth-child(7) .project-row-tags .tag { color: var(--green);   border-color: rgba(67,217,173,0.2);  background: rgba(67,217,173,0.05); }
 
+    /* CERTIFICATES */
+    #certs .section-num { color: var(--pink); }
+
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .cert-card {
+      background: var(--bg2);
+      padding: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: background 0.2s;
+    }
+    .cert-card:hover { background: var(--surface); }
+
+    .cert-issuer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cert-badge {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .cert-date {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--text-faint);
+    }
+
+    .cert-name {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.35;
+    }
+
+    .cert-issuer {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--text-dim);
+    }
+
+    .cert-link {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--text-faint);
+      text-decoration: none;
+      border: 1px solid var(--border2);
+      border-radius: 4px;
+      padding: 0.25rem 0.65rem;
+      align-self: flex-start;
+      transition: all 0.15s;
+      margin-top: auto;
+    }
+    .cert-link:hover { color: var(--accent); border-color: var(--accent); }
+
+    @media (max-width: 900px) {
+      .certs-grid { grid-template-columns: 1fr; }
+    }
+
     /* Contact card icon colors */
     .contact-cards .contact-card:nth-child(1) .contact-card-icon svg { stroke: var(--accent); }
     .contact-cards .contact-card:nth-child(2) .contact-card-icon svg { stroke: var(--green); }
@@ -689,11 +763,86 @@
 
 <div class="divider"><hr></div>
 
+<!-- CERTIFICATES -->
+<section class="section reveal" id="certs">
+  <div class="section-header">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Certificates</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="certs-grid">
+
+    <div class="cert-card">
+      <div class="cert-issuer-row">
+        <div class="cert-badge" style="background:rgba(79,195,247,0.12)">🎓</div>
+        <span class="cert-date">Jan 2024</span>
+      </div>
+      <div class="cert-name">Google IT Support Professional Certificate</div>
+      <div class="cert-issuer">Google · Coursera</div>
+      <a href="#" class="cert-link">View Certificate ↗</a>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-issuer-row">
+        <div class="cert-badge" style="background:rgba(67,217,173,0.12)">⚛️</div>
+        <span class="cert-date">Mar 2024</span>
+      </div>
+      <div class="cert-name">Meta Front-End Developer Professional Certificate</div>
+      <div class="cert-issuer">Meta · Coursera</div>
+      <a href="#" class="cert-link">View Certificate ↗</a>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-issuer-row">
+        <div class="cert-badge" style="background:rgba(189,147,249,0.12)">☁️</div>
+        <span class="cert-date">Jun 2024</span>
+      </div>
+      <div class="cert-name">AWS Cloud Practitioner Essentials</div>
+      <div class="cert-issuer">Amazon Web Services · AWS Skill Builder</div>
+      <a href="#" class="cert-link">View Certificate ↗</a>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-issuer-row">
+        <div class="cert-badge" style="background:rgba(255,184,108,0.12)">🟨</div>
+        <span class="cert-date">Aug 2024</span>
+      </div>
+      <div class="cert-name">JavaScript Algorithms and Data Structures</div>
+      <div class="cert-issuer">freeCodeCamp</div>
+      <a href="#" class="cert-link">View Certificate ↗</a>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-issuer-row">
+        <div class="cert-badge" style="background:rgba(255,121,198,0.12)">🔷</div>
+        <span class="cert-date">Oct 2024</span>
+      </div>
+      <div class="cert-name">Responsive Web Design</div>
+      <div class="cert-issuer">freeCodeCamp</div>
+      <a href="#" class="cert-link">View Certificate ↗</a>
+    </div>
+
+    <div class="cert-card">
+      <div class="cert-issuer-row">
+        <div class="cert-badge" style="background:rgba(79,195,247,0.12)">🐍</div>
+        <span class="cert-date">Dec 2024</span>
+      </div>
+      <div class="cert-name">Python for Everybody Specialisation</div>
+      <div class="cert-issuer">University of Michigan · Coursera</div>
+      <a href="#" class="cert-link">View Certificate ↗</a>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
 <!-- CONTACT -->
 <div id="contact-section">
   <section class="section reveal" id="contact">
     <div class="section-header">
-      <span class="section-num">04</span>
+      <span class="section-num">05</span>
       <h2 class="section-title">Get In Touch</h2>
       <div class="section-line"></div>
     </div>
@@ -714,21 +863,23 @@
             <div class="contact-card-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
             <div><div class="contact-card-label">GitHub</div><div class="contact-card-val">github.com/khalidfarah1</div></div>
           </a>
-          <a href="https://linkedin.com/in/khalidfarah" target="_blank" class="contact-card">
+          <a href="https://www.linkedin.com/in/khalid-farah-435691147" target="_blank" class="contact-card">
             <div class="contact-card-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
-            <div><div class="contact-card-label">LinkedIn</div><div class="contact-card-val">linkedin.com/in/khalidfarah</div></div>
+            <div><div class="contact-card-label">LinkedIn</div><div class="contact-card-val">linkedin.com/in/khalid-farah-435691147</div></div>
           </a>
         </div>
       </div>
 
-      <form class="contact-form" onsubmit="handleSubmit(event)">
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/mykbkbdq" method="POST">
         <div class="form-row">
-          <div class="field"><label>Name</label><input type="text" placeholder="Jane Smith" required /></div>
-          <div class="field"><label>Email</label><input type="email" placeholder="jane@example.com" required /></div>
+          <div class="field"><label>Name</label><input type="text" name="name" placeholder="Jane Smith" required /></div>
+          <div class="field"><label>Email</label><input type="email" name="email" placeholder="jane@example.com" required /></div>
         </div>
-        <div class="field"><label>Subject</label><input type="text" placeholder="Project enquiry / collaboration / role..." /></div>
-        <div class="field"><label>Message</label><textarea placeholder="Tell me about your project or opportunity..." required></textarea></div>
+        <div class="field"><label>Subject</label><input type="text" name="subject" placeholder="Project enquiry / collaboration / role..." /></div>
+        <div class="field"><label>Message</label><textarea name="message" placeholder="Tell me about your project or opportunity..." required></textarea></div>
         <button type="submit" class="btn btn-primary" id="submit-btn" style="align-self:flex-start">Send Message →</button>
+        <p id="form-success" style="display:none;margin-top:0.75rem;font-size:0.85rem;color:#43d9ad">✓ Message sent! I'll get back to you soon.</p>
+        <p id="form-error" style="display:none;margin-top:0.75rem;font-size:0.85rem;color:#ff79c6">Something went wrong. Please try emailing me directly.</p>
       </form>
     </div>
   </section>
@@ -739,7 +890,7 @@
   <div class="footer-right">
     <a href="mailto:khalidfarah9@gmail.com">Email</a>
     <a href="https://github.com/khalidfarah1" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/in/khalidfarah" target="_blank">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/khalid-farah-435691147" target="_blank">LinkedIn</a>
   </div>
 </footer>
 
@@ -770,15 +921,45 @@
     }
   }, { threshold: 0.2 }).observe(langList);
 
-  // Contact form
-  function handleSubmit(e) {
+  // Contact form — powered by Formspree
+  document.getElementById('contact-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const btn = document.getElementById('submit-btn');
-    btn.textContent = 'Message sent ✓';
-    btn.style.background = '#43d9ad';
+    const success = document.getElementById('form-success');
+    const error = document.getElementById('form-error');
+
+    btn.textContent = 'Sending...';
     btn.disabled = true;
-    setTimeout(() => { btn.textContent = 'Send Message →'; btn.style.background = ''; btn.disabled = false; e.target.reset(); }, 3500);
-  }
+    success.style.display = 'none';
+    error.style.display = 'none';
+
+    try {
+      const res = await fetch(this.action, {
+        method: 'POST',
+        body: new FormData(this),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        btn.textContent = 'Message sent ✓';
+        btn.style.background = '#43d9ad';
+        success.style.display = 'block';
+        this.reset();
+        setTimeout(() => {
+          btn.textContent = 'Send Message →';
+          btn.style.background = '';
+          btn.disabled = false;
+          success.style.display = 'none';
+        }, 5000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch {
+      btn.textContent = 'Send Message →';
+      btn.disabled = false;
+      error.style.display = 'block';
+    }
+  });
 </script>
 </body>
 </html>
