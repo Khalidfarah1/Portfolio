@@ -118,6 +118,7 @@
       transition: color 0.2s, background 0.2s;
     }
     .nav-links a:hover { color: var(--text); background: var(--surface); }
+    .nav-links a.active { color: var(--accent); background: var(--surface); }
 
     .nav-cta {
       font-family: var(--mono);
@@ -901,6 +902,19 @@
       });
     }
   }, { threshold: 0.2 }).observe(langList);
+
+  // Scroll spy
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const sections = ['about', 'skills', 'projects', 'certs', 'contact'].map(id => document.getElementById(id));
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+      if (sec && window.scrollY >= sec.offsetTop - 120) current = sec.id;
+    });
+    navLinks.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+    });
+  });
 
   // Contact form — powered by Formspree
   document.getElementById('contact-form').addEventListener('submit', async function(e) {
