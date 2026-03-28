@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 — Khalid Farah</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #080b10; --bg2: #0d1117; --border: #1c2333;
+      --accent: #4fc3f7; --green: #43d9ad; --text: #cdd9e5; --text-dim: #768390;
+      --sans: 'DM Sans', sans-serif; --mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg); color: var(--text); font-family: var(--sans);
+      min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align: center; padding: 2rem;
+    }
+    body::before {
+      content: ''; position: fixed; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 10% 20%, rgba(79,195,247,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 45% at 90% 15%, rgba(189,147,249,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 55% 50% at 80% 80%, rgba(67,217,173,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .code {
+      font-family: var(--mono); font-size: 6rem; font-weight: 700;
+      color: var(--accent); line-height: 1; margin-bottom: 1rem;
+      position: relative; z-index: 1;
+    }
+    .msg {
+      font-size: 1.2rem; color: var(--text-dim); margin-bottom: 0.5rem;
+      position: relative; z-index: 1;
+    }
+    .sub {
+      font-family: var(--mono); font-size: 0.8rem; color: var(--text-dim);
+      margin-bottom: 2.5rem; position: relative; z-index: 1;
+    }
+    .btn {
+      display: inline-block; font-family: var(--mono); font-size: 0.82rem;
+      padding: 0.65rem 1.5rem; border-radius: 6px; text-decoration: none;
+      border: 1px solid rgba(79,195,247,0.3); color: var(--accent);
+      transition: all 0.2s; position: relative; z-index: 1;
+    }
+    .btn:hover { background: rgba(79,195,247,0.07); border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="code">404</div>
+  <p class="msg">Page not found</p>
+  <p class="sub">// this route doesn't exist</p>
+  <a href="index.html" class="btn">← Back to portfolio</a>
+</body>
+</html>
