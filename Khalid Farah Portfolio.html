@@ -376,6 +376,11 @@
       gap: 1px; background: var(--border);
       border: 1px solid var(--border); border-radius: 10px; overflow: hidden;
     }
+    .project-row-img {
+      width: 160px; height: 100px; object-fit: cover; object-position: top;
+      border-radius: 6px; border: 1px solid var(--border);
+      flex-shrink: 0;
+    }
     .project-row {
       display: grid; grid-template-columns: 1fr auto;
       align-items: center; gap: 2rem;
@@ -734,11 +739,17 @@
   <div class="projects-list">
     <div class="project-row">
       <div><div class="project-row-tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span></div><div class="project-row-name">Bartho Bank</div><div class="project-row-desc">A fully-featured personal banking app with real-time balance tracking, money transfers, spending analytics with category breakdowns, editable account details, and bank details with one-tap copy. Built with React, TypeScript and an in-memory store.</div></div>
-      <div class="project-row-links"><a href="https://bartho-bank.vercel.app/" class="proj-link">Live Demo ↗</a><a href="https://github.com/Khalidfarah1/Bartho-Bank" class="proj-link">GitHub →</a></div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.75rem;flex-shrink:0;">
+        <img src="bartho-bank-preview.jpeg" alt="Bartho Bank preview" class="project-row-img" />
+        <div class="project-row-links"><a href="https://bartho-bank.vercel.app/" class="proj-link">Live Demo ↗</a><a href="https://github.com/Khalidfarah1/Bartho-Bank" class="proj-link">GitHub →</a></div>
+      </div>
     </div>
     <div class="project-row">
       <div><div class="project-row-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">localStorage</span></div><div class="project-row-name">It's a Date</div><div class="project-row-desc">A premium e-commerce website for a home-owned dates &amp; chocolate business. Features a product catalogue with basket management, promo codes, a login/sign-up flow, and a Rituals.com-inspired design with animated gradients and a purple/gold palette.</div></div>
-      <div class="project-row-links"><a href="https://it-s-a-date-lmm2dy5f6-khalidfarah1s-projects.vercel.app/index.html" class="proj-link">Live Demo ↗</a><a href="https://github.com/Khalidfarah1/It-s-a-Date" class="proj-link">GitHub →</a></div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:0.75rem;flex-shrink:0;">
+        <img src="its-a-date-preview.jpeg" alt="It's a Date preview" class="project-row-img" />
+        <div class="project-row-links"><a href="https://it-s-a-date-lmm2dy5f6-khalidfarah1s-projects.vercel.app/index.html" class="proj-link">Live Demo ↗</a><a href="https://github.com/Khalidfarah1/It-s-a-Date" class="proj-link">GitHub →</a></div>
+      </div>
     </div>
   </div>
 </section>
