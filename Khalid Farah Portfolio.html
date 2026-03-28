@@ -37,6 +37,28 @@
       overflow-x: hidden;
     }
 
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 10% 20%,  rgba(79,195,247,0.07)  0%, transparent 70%),
+        radial-gradient(ellipse 50% 45% at 90% 15%,  rgba(189,147,249,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 55% 50% at 80% 80%,  rgba(67,217,173,0.06)  0%, transparent 70%),
+        radial-gradient(ellipse 45% 40% at 20% 85%,  rgba(255,184,108,0.05) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 35% at 55% 50%,  rgba(255,121,198,0.04) 0%, transparent 70%);
+      animation: auroraShift 18s ease-in-out infinite alternate;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    @keyframes auroraShift {
+      0%   { opacity: 1;   transform: scale(1)    rotate(0deg); }
+      33%  { opacity: 0.8; transform: scale(1.06) rotate(1deg); }
+      66%  { opacity: 0.9; transform: scale(0.97) rotate(-1deg); }
+      100% { opacity: 1;   transform: scale(1.04) rotate(0.5deg); }
+    }
+
     body::after {
       content: '';
       position: fixed;
@@ -448,6 +470,7 @@
     .project-row:nth-child(4) .project-row-tags .tag { color: var(--orange);  border-color: rgba(255,184,108,0.2); background: rgba(255,184,108,0.05); }
     .project-row:nth-child(5) .project-row-tags .tag { color: var(--pink);    border-color: rgba(255,121,198,0.2); background: rgba(255,121,198,0.05); }
     .project-row:nth-child(6) .project-row-tags .tag { color: var(--accent);  border-color: rgba(79,195,247,0.2);  background: rgba(79,195,247,0.05); }
+    .project-row:nth-child(7) .project-row-tags .tag { color: var(--green);   border-color: rgba(67,217,173,0.2);  background: rgba(67,217,173,0.05); }
 
     /* Contact card icon colors */
     .contact-cards .contact-card:nth-child(1) .contact-card-icon svg { stroke: var(--accent); }
@@ -656,6 +679,10 @@
     <div class="project-row">
       <div><div class="project-row-tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span></div><div class="project-row-name">Online Booking System</div><div class="project-row-desc">Appointment booking system with calendar sync, automated email notifications, and integrated payment support for service businesses.</div></div>
       <div class="project-row-links"><a href="#" class="proj-link">Live Demo ↗</a><a href="#" class="proj-link">GitHub →</a></div>
+    </div>
+    <div class="project-row">
+      <div><div class="project-row-tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">Tailwind CSS</span></div><div class="project-row-name">Bartho Bank</div><div class="project-row-desc">A fully-featured personal banking app with real-time balance tracking, money transfers, spending analytics with category breakdowns, editable account details, and bank details with one-tap copy. Built with React, TypeScript and an in-memory store.</div></div>
+      <div class="project-row-links"><a href="#" class="proj-link">Live Demo ↗</a><a href="https://github.com/khalidfarah1/bartho-bank" class="proj-link">GitHub →</a></div>
     </div>
   </div>
 </section>
