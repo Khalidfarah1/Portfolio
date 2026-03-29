@@ -1,0 +1,50 @@
+<h2>How should we introduce more colour?</h2>
+<p class="subtitle">Your portfolio already defines cyan, purple, green, orange & pink — they're just not all visible yet. Pick the approach that feels right.</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Accent text highlights</h3>
+      <p>Use the existing palette more on headings, labels, and section numbers. Each section gets a distinct colour accent — e.g. purple for Skills, orange for Projects, pink for Certificates.</p>
+      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;">
+        <span style="background:#4fc3f7;color:#080b10;padding:3px 10px;border-radius:4px;font-size:12px;font-family:monospace">01 / Hero — cyan</span>
+        <span style="background:#bd93f9;color:#080b10;padding:3px 10px;border-radius:4px;font-size:12px;font-family:monospace">03 / Skills — purple</span>
+        <span style="background:#ffb86c;color:#080b10;padding:3px 10px;border-radius:4px;font-size:12px;font-family:monospace">04 / Projects — orange</span>
+        <span style="background:#ff79c6;color:#080b10;padding:3px 10px;border-radius:4px;font-size:12px;font-family:monospace">05 / Certs — pink</span>
+        <span style="background:#43d9ad;color:#080b10;padding:3px 10px;border-radius:4px;font-size:12px;font-family:monospace">06 / Contact — green</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Coloured tags & chips</h3>
+      <p>Skill tags, certificate badges, and project tech labels each get a coloured border or tint — pulling from the existing palette. The structural chrome stays dark; colour lives in the detail layer.</p>
+      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;">
+        <span style="border:1px solid #4fc3f7;color:#4fc3f7;padding:3px 10px;border-radius:20px;font-size:12px;font-family:monospace">TypeScript</span>
+        <span style="border:1px solid #bd93f9;color:#bd93f9;padding:3px 10px;border-radius:20px;font-size:12px;font-family:monospace">React</span>
+        <span style="border:1px solid #43d9ad;color:#43d9ad;padding:3px 10px;border-radius:20px;font-size:12px;font-family:monospace">Next.js</span>
+        <span style="border:1px solid #ffb86c;color:#ffb86c;padding:3px 10px;border-radius:20px;font-size:12px;font-family:monospace">Tailwind</span>
+        <span style="border:1px solid #ff79c6;color:#ff79c6;padding:3px 10px;border-radius:20px;font-size:12px;font-family:monospace">Node.js</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Both A + B combined</h3>
+      <p>Section numbers and divider lines get per-section accent colours <em>and</em> tags/chips get coloured borders. More visual richness overall, still cohesive since all colours come from the existing palette.</p>
+      <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;align-items:center;">
+        <span style="color:#bd93f9;font-size:13px;font-family:monospace;font-weight:600">03 /</span>
+        <span style="color:#bd93f9;font-size:13px;font-family:monospace">Skills</span>
+        <span style="width:1px;height:16px;background:#333;display:inline-block"></span>
+        <span style="border:1px solid #bd93f9;color:#bd93f9;padding:3px 10px;border-radius:20px;font-size:12px;font-family:monospace">React</span>
+        <span style="border:1px solid #4fc3f7;color:#4fc3f7;padding:3px 10px;border-radius:20px;font-size:12px;font-family:monospace">TypeScript</span>
+        <span style="border:1px solid #43d9ad;color:#43d9ad;padding:3px 10px;border-radius:20px;font-size:12px;font-family:monospace">Next.js</span>
+      </div>
+    </div>
+  </div>
+</div>
