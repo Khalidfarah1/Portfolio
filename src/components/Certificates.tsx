@@ -29,7 +29,7 @@ export default function Certificates() {
       <div className="section-header">
         <span className="section-num" style={{ color: 'var(--pink)' }}>04</span>
         <h2 className="section-title">Certificates</h2>
-        <div className="section-line" />
+        <div className="section-line" style={{ background: 'linear-gradient(to right, var(--pink), transparent)' }} />
       </div>
 
       <div className="certs-grid">

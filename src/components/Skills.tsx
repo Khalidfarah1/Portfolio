@@ -1,21 +1,21 @@
 'use client'
 import { useEffect, useRef } from 'react'
 
-const skills: Record<string, string[]> = {
-  Frontend: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Responsive Design', 'Accessibility'],
-  Backend: ['Node.js', 'Express', 'Python', 'Java', 'Object-Oriented Programming', 'FastAPI', 'PHP', 'REST APIs', 'JWT / Auth'],
-  Databases: ['PostgreSQL', 'MySQL', 'MongoDB', 'Prisma', 'SQL'],
-  'Tools & DevOps': ['Git', 'GitHub', 'Docker', 'Linux', 'CI/CD', 'Vercel', 'VS Code'],
-}
+const skills = [
+  { category: 'Frontend',       color: 'var(--accent)',  tags: ['HTML5', 'CSS3', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Responsive Design', 'Accessibility'] },
+  { category: 'Backend',        color: 'var(--green)',   tags: ['Node.js', 'Express', 'Python', 'Java', 'Object-Oriented Programming', 'FastAPI', 'PHP', 'REST APIs', 'JWT / Auth'] },
+  { category: 'Databases',      color: 'var(--orange)',  tags: ['PostgreSQL', 'MySQL', 'MongoDB', 'Prisma', 'SQL'] },
+  { category: 'Tools & DevOps', color: 'var(--pink)',    tags: ['Git', 'GitHub', 'Docker', 'Linux', 'CI/CD', 'Vercel', 'VS Code'] },
+]
 
 const languages = [
-  { name: 'JavaScript / TypeScript', pct: '95%', w: 0.95 },
-  { name: 'HTML & CSS', pct: '98%', w: 0.98 },
-  { name: 'Node.js', pct: '88%', w: 0.88 },
-  { name: 'Python', pct: '80%', w: 0.80 },
-  { name: 'SQL', pct: '82%', w: 0.82 },
-  { name: 'PHP', pct: '70%', w: 0.70 },
-  { name: 'Bash / Shell', pct: '62%', w: 0.62 },
+  { name: 'JavaScript / TypeScript', pct: '95%', w: 0.95, color: 'var(--accent)' },
+  { name: 'HTML & CSS',              pct: '98%', w: 0.98, color: 'var(--accent)' },
+  { name: 'Node.js',                 pct: '88%', w: 0.88, color: 'var(--green)'  },
+  { name: 'Python',                  pct: '80%', w: 0.80, color: 'var(--green)'  },
+  { name: 'SQL',                     pct: '82%', w: 0.82, color: 'var(--orange)' },
+  { name: 'PHP',                     pct: '70%', w: 0.70, color: 'var(--green)'  },
+  { name: 'Bash / Shell',            pct: '62%', w: 0.62, color: 'var(--pink)'   },
 ]
 
 export default function Skills() {
@@ -55,14 +55,14 @@ export default function Skills() {
   return (
     <section ref={sectionRef} className="section reveal" id="skills">
       <div className="section-header">
-        <span className="section-num">02</span>
+        <span className="section-num" style={{ color: 'var(--purple)' }}>02</span>
         <h2 className="section-title">Skills &amp; Technologies</h2>
-        <div className="section-line" />
+        <div className="section-line" style={{ background: 'linear-gradient(to right, var(--purple), transparent)' }} />
       </div>
 
       <div className="skills-cols">
-        {Object.entries(skills).map(([category, tags]) => (
-          <div key={category} className="skill-block">
+        {skills.map(({ category, color, tags }) => (
+          <div key={category} className="skill-block" style={{ '--cat-color': color } as React.CSSProperties}>
             <div className="skill-block-title">{category}</div>
             <div className="skill-tags">
               {tags.map(tag => <span key={tag} className="tag">{tag}</span>)}
@@ -72,20 +72,20 @@ export default function Skills() {
       </div>
 
       <div className="lang-sub-header">
-        <span className="section-num" style={{ fontSize: '0.68rem' }}>lang</span>
+        <span className="section-num" style={{ fontSize: '0.68rem', color: 'var(--purple)' }}>lang</span>
         <h3 className="section-title" style={{ fontSize: '1.05rem', fontWeight: 600 }}>Language Proficiency</h3>
-        <div className="section-line" />
+        <div className="section-line" style={{ background: 'linear-gradient(to right, var(--purple), transparent)' }} />
       </div>
 
       <div className="lang-list" ref={langRef}>
-        {languages.map(({ name, pct, w }) => (
+        {languages.map(({ name, pct, w, color }) => (
           <div key={name} className="lang-row">
             <div className="lang-meta">
               <span className="lang-name-label">{name}</span>
-              <span className="lang-pct">{pct}</span>
+              <span className="lang-pct" style={{ color }}>{pct}</span>
             </div>
             <div className="lang-bar-track">
-              <div className="lang-bar-fill" data-w={String(w)} />
+              <div className="lang-bar-fill" data-w={String(w)} style={{ background: color }} />
             </div>
           </div>
         ))}

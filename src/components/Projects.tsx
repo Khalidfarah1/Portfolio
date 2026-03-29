@@ -38,9 +38,9 @@ export default function Projects() {
   return (
     <section ref={ref} className="section reveal" id="projects">
       <div className="section-header">
-        <span className="section-num">03</span>
+        <span className="section-num" style={{ color: 'var(--orange)' }}>03</span>
         <h2 className="section-title">Featured Projects</h2>
-        <div className="section-line" />
+        <div className="section-line" style={{ background: 'linear-gradient(to right, var(--orange), transparent)' }} />
       </div>
 
       <div className="projects-list">

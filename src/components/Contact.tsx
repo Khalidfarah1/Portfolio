@@ -39,9 +39,9 @@ export default function Contact() {
     <div id="contact-section">
       <section ref={ref} className="section reveal" id="contact">
         <div className="section-header">
-          <span className="section-num">05</span>
+          <span className="section-num" style={{ color: 'var(--green)' }}>05</span>
           <h2 className="section-title">Get In Touch</h2>
-          <div className="section-line" />
+          <div className="section-line" style={{ background: 'linear-gradient(to right, var(--green), transparent)' }} />
         </div>
         <div className="contact-wrap">
           <div>

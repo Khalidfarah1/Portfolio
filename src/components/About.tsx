@@ -18,9 +18,9 @@ export default function About() {
   return (
     <section ref={ref} className="section reveal" id="about">
       <div className="section-header">
-        <span className="section-num">01</span>
+        <span className="section-num" style={{ color: 'var(--accent)' }}>01</span>
         <h2 className="section-title">About Me</h2>
-        <div className="section-line" />
+        <div className="section-line" style={{ background: 'linear-gradient(to right, var(--accent), transparent)' }} />
       </div>
       <div className="about-grid">
         <div className="about-text">
@@ -31,10 +31,10 @@ export default function About() {
         </div>
         <div>
           <div className="about-stats">
-            <div className="stat-item"><span className="stat-num">1+</span><span className="stat-lbl">Years Experience</span></div>
-            <div className="stat-item"><span className="stat-num">6+</span><span className="stat-lbl">Projects Delivered</span></div>
-            <div className="stat-item"><span className="stat-num">∞</span><span className="stat-lbl">Cups of Coffee</span></div>
-            <div className="stat-item"><span className="stat-num">8+</span><span className="stat-lbl">Languages &amp; Frameworks</span></div>
+            <div className="stat-item"><span className="stat-num" style={{ color: 'var(--accent)' }}>1+</span><span className="stat-lbl">Years Experience</span></div>
+            <div className="stat-item"><span className="stat-num" style={{ color: 'var(--green)' }}>6+</span><span className="stat-lbl">Projects Delivered</span></div>
+            <div className="stat-item"><span className="stat-num" style={{ color: 'var(--orange)' }}>∞</span><span className="stat-lbl">Cups of Coffee</span></div>
+            <div className="stat-item"><span className="stat-num" style={{ color: 'var(--pink)' }}>8+</span><span className="stat-lbl">Languages &amp; Frameworks</span></div>
           </div>
         </div>
       </div>
