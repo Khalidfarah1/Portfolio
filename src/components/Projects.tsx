@@ -12,6 +12,14 @@ const projects = [
     github: 'https://github.com/Khalidfarah1/Bartho-Bank',
   },
   {
+    name: 'Spotify Stats Dashboard',
+    tags: ['React', 'TypeScript', 'Vite', 'Spotify API', 'OAuth 2.0'],
+    desc: 'A personal Spotify stats dashboard built with React and the Spotify Web API. Features OAuth 2.0 PKCE authentication, top tracks and artists with time range filtering, genre breakdown, audio profile (energy, danceability, happiness), recently played history, animated stats, light/dark mode, and a shareable Top 5 card.',
+    image: '/spotify-dashboard-preview.jpeg',
+    demo: 'https://spotify-dashboard-tau.vercel.app',
+    github: 'https://github.com/Khalidfarah1/spotify-dashboard',
+  },
+  {
     name: "It's a Date",
     tags: ['HTML', 'CSS', 'JavaScript', 'localStorage'],
     desc: "A premium e-commerce website for a home-owned dates & chocolate business. Features a product catalogue with basket management, promo codes, a login/sign-up flow, and a Rituals.com-inspired design with animated gradients and a purple/gold palette.",
