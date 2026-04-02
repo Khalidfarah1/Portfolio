@@ -50,7 +50,7 @@ export default function Hero() {
         <div className="hero-eyebrow">Full Stack Developer</div>
         <div className="hero-name-row">
           <div className="hero-avatar">
-            <Image src="/Khalid-farah-avatar.png" alt="Khalid Farah" width={120} height={120} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }} />
+            <Image src="/Khalid-farah-avatar.png" alt="Khalid Farah" width={160} height={160} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top center' }} />
           </div>
           <h1>Khalid<br />Farah</h1>
         </div>
