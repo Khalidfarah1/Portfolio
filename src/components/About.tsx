@@ -31,7 +31,7 @@ export default function About() {
         </div>
         <div>
           <div className="about-stats">
-            <div className="stat-item"><span className="stat-num" style={{ color: 'var(--accent)' }}>1+</span><span className="stat-lbl">Years Experience</span></div>
+            <div className="stat-item"><span className="stat-num" style={{ color: 'var(--accent)' }}>2+</span><span className="stat-lbl">Years Experience</span></div>
             <div className="stat-item"><span className="stat-num" style={{ color: 'var(--green)' }}>6+</span><span className="stat-lbl">Projects Delivered</span></div>
             <div className="stat-item"><span className="stat-num" style={{ color: 'var(--orange)' }}>∞</span><span className="stat-lbl">Cups of Coffee</span></div>
             <div className="stat-item"><span className="stat-num" style={{ color: 'var(--pink)' }}>8+</span><span className="stat-lbl">Languages &amp; Frameworks</span></div>
