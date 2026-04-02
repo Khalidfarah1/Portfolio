@@ -61,7 +61,6 @@ export default function Hero() {
         <div className="hero-actions">
           <a href="#projects" className="btn btn-primary">View Projects</a>
           <a href="#contact" className="btn btn-ghost">Get In Touch</a>
-          <a href="/Khalid_Farah_CV.pdf" download className="btn btn-ghost">Download CV ↓</a>
         </div>
       </div>
 
