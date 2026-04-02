@@ -5,8 +5,8 @@ import Image from 'next/image'
 const projects = [
   {
     name: 'Bartho Bank',
-    tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS'],
-    desc: 'A fully-featured personal banking app with real-time balance tracking, money transfers, spending analytics with category breakdowns, editable account details, and bank details with one-tap copy. Built with React, TypeScript and an in-memory store.',
+    tags: ['React', 'TypeScript', 'Node.js', 'Express', 'PostgreSQL', 'Prisma', 'JWT'],
+    desc: 'A full-stack personal banking app with a REST API backend, JWT authentication, and a PostgreSQL database via Prisma ORM. Features real-time balance tracking, money transfers, spending analytics with category breakdowns, editable account details, and bank details with one-tap copy. Backend has 29 tests with full route and middleware coverage.',
     image: '/bartho-bank-preview.jpeg',
     demo: 'https://bartho-bank.vercel.app/',
     github: 'https://github.com/Khalidfarah1/Bartho-Bank',
